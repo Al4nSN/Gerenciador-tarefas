@@ -1,0 +1,139 @@
+/* Geral */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  background: linear-gradient(135deg, #FF9A9E, #FAD0C4);
+}
+
+.container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  transition: transform 0.3s ease;
+}
+
+.container:hover {
+  transform: scale(1.05);
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease;
+}
+
+/* Input */
+.input-container {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.input-field {
+  width: 75%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px solid #ddd;
+  font-size: 1rem;
+  transition: border 0.3s ease;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #ff758c;
+}
+
+.add-button {
+  background-color: #ff758c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+}
+
+.add-button:hover {
+  background-color: #ff6b81;
+}
+
+/* List */
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.task-list li {
+  background-color: #ffe1e1;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0;
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.task-list li:nth-child(even) {
+  background-color: #ffe1f1;
+}
+
+.delete {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete:hover {
+  background-color: #ff3b3b;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}

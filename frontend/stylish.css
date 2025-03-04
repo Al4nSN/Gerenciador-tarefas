@@ -1,0 +1,151 @@
+/* 🌑 Tema Minimalista Moderno */
+body {
+  background: #121212; /* Fundo escuro */
+  color: #fff;
+  font-family: 'Roboto', sans-serif; /* Fonte moderna e clean */
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Container principal centralizado */
+.container {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 20px;
+  background: rgba(20, 20, 20, 0.85);
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  animation: fadeIn 1s ease-in-out; /* Animação de entrada */
+}
+
+/* Título */
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #00ffff;
+  text-shadow: 0px 0px 10px rgba(0, 255, 255, 0.6);
+  margin-bottom: 30px;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Input de texto com borda minimalista */
+input {
+  width: 85%;
+  padding: 12px;
+  border: 1px solid #00ffff;
+  background: transparent;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 20px;
+}
+
+input:focus {
+  border-color: #ff00ff;
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.8);
+}
+
+/* Botão com animação e transição suave */
+button {
+  padding: 12px 24px;
+  font-size: 18px;
+  background: linear-gradient(45deg, #ff00ff, #00ffff);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-top: 10px;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.6), 0 0 30px rgba(0, 255, 255, 0.6);
+  animation: glowEffect 1.5s infinite alternate;
+}
+
+/* Animação de brilho no botão */
+@keyframes glowEffect {
+  0% {
+      box-shadow: 0 0 10px rgba(255, 0, 255, 0.6), 0 0 20px rgba(0, 255, 255, 0.6);
+  }
+  100% {
+      box-shadow: 0 0 20px rgba(255, 0, 255, 1), 0 0 40px rgba(0, 255, 255, 1);
+  }
+}
+
+/* Lista de tarefas */
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Tarefas com bordas finas e animação suave */
+.task-item {
+  background: #222;
+  padding: 12px;
+  margin: 10px 0;
+  border-left: 4px solid #00ffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: slideIn 0.5s ease-out forwards;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+@keyframes slideIn {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Animação suave de fade-in no carregamento */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+/* Efeito de hover nas tarefas */
+.task-item:hover {
+  background: #333;
+  box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.5);
+  border-left: 4px solid #ff00ff;
+}
+
+/* Botão de deletar com efeito de hover */
+.delete {
+  background: #ff007f;
+  color: #fff;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.delete:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.8);
+}
+
+/* Animação de desaparecimento ao excluir uma tarefa */
+.task-item.removed {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.3s ease-out;
+}
